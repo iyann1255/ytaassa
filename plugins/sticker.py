@@ -18,7 +18,7 @@ from pyrogram.errors import (
 from pyrogram.file_id import FileId
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from DanteMusic import app
+from VIPMUSIC import app
 from utils.error import capture_err
 
 BOT_USERNAME = app.username
@@ -46,7 +46,8 @@ async def get_sticker_set_by_name(
 
 # Known errors: (I don't see a reason to catch them as we, for sure, won't face them right now):
 # errors.exceptions.bad_request_400.PackShortNameInvalid -> pack name needs to end with _by_botname
-# errors.exceptions.bad_request_400.ShortnameOccupyFailed -> pack's name is already in use
+# errors.exceptions.bad_request_400.ShortnameOccupyFailed -> pack's name
+# is already in use
 
 
 async def create_sticker_set(
@@ -249,7 +250,8 @@ async def kang(client, message: Message):
         return print(e)
 
     # Find an available pack & add the sticker to the pack; create a new pack if needed
-    # Would be a good idea to cache the number instead of searching it every single time...
+    # Would be a good idea to cache the number instead of searching it every
+    # single time...
     packnum = 0
     packname = "f" + str(message.from_user.id) + "_by_" + BOT_USERNAME
     limit = 0
@@ -288,11 +290,11 @@ async def kang(client, message: Message):
             limit += 1
             break
 
-        await msg.edit(
-            "Sticker Kanged To [Pack](t.me/addstickers/{})\nEmoji: {}".format(
-                packname, sticker_emoji
-            )
-        )
+        keyboard = InlineKeyboardMarkup([[InlineKeyboardButton(text="sᴇᴇ ᴘᴀᴄᴋ", url=f"t.me/addstickers/{packname}")]])
+        
+        await msg.edit(f"Sticker Kanged.\nEmoji: {sticker_emoji}", reply_markup=keyboard)
+            
+        
     except (PeerIdInvalid, UserIsBlocked):
         keyboard = InlineKeyboardMarkup(
             [[InlineKeyboardButton(text="Start", url=f"t.me/{BOT_USERNAME}")]]
@@ -309,15 +311,17 @@ async def kang(client, message: Message):
         await message.reply_text("The sticker png dimensions are invalid.")
 
 
-__MODULE__ = "Sticker"
-__HELP__ = """<blockquote><b>
+
+
+__MODULE__ = "Sᴛɪᴄᴋᴇʀ"
+__HELP__ = """
 **COMMANDS:**
 
-• /stickerid - **gets the file id of any replied sticker.**
-• /getsticker - **gets the image of any replied sticker.**
-• /kang - **kangs any sticker in the you pack**
+• /stickerid - **ɢᴇᴛs ᴛʜᴇ ғɪʟᴇ ɪᴅ ᴏғ ᴀɴʏ ʀᴇᴘʟɪᴇᴅ sᴛɪᴄᴋᴇʀ.**
+• /getsticker - **ɢᴇᴛs ᴛʜᴇ ɪᴍᴀɢᴇ ᴏғ ᴀɴʏ ʀᴇᴘʟɪᴇᴅ sᴛɪᴄᴋᴇʀ.**
+• /kang - **ᴋᴀɴɢs ᴀɴʏ sᴛɪᴄᴋᴇʀ ɪɴ ᴛʜᴇ ʏᴏᴜ ᴘᴀᴄᴋ**
 
 **INFO:**
 
-- this bot allows users to get the file id or the image of any sticker that is replied to a message, and also allows users to kang any sticker in the chat and add it to a sticker pack.
-</b></blockquote>"""
+- ᴛʜɪs ʙᴏᴛ ᴀʟʟᴏᴡs ᴜsᴇʀs ᴛᴏ ɢᴇᴛ ᴛʜᴇ ғɪʟᴇ ɪᴅ ᴏʀ ᴛʜᴇ ɪᴍᴀɢᴇ ᴏғ ᴀɴʏ sᴛɪᴄᴋᴇʀ ᴛʜᴀᴛ ɪs ʀᴇᴘʟɪᴇᴅ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ, ᴀɴᴅ ᴀʟsᴏ ᴀʟʟᴏᴡs ᴜsᴇʀs ᴛᴏ ᴋᴀɴɢ ᴀɴʏ sᴛɪᴄᴋᴇʀ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ ᴀɴᴅ ᴀᴅᴅ ɪᴛ ᴛᴏ ᴀ sᴛɪᴄᴋᴇʀ ᴘᴀᴄᴋ.
+"""
