@@ -41,7 +41,7 @@ async def tag_all_users(_, message):
                 if usernum == 7:
                     await app.send_message(
                         message.chat.id,
-                        f"<blockquote><b>{replied.text}{usertxt}</blockquote></b>\n<blockquote><b>ᴄʀᴇᴀᴛᴇᴅ ʙʏ:\n@SpotifyStream_Id</b></blockquote>",
+                        f"<blockquote><b>{replied.text}{usertxt}</blockquote></b>\n<blockquote><b>ᴄʀᴇᴀᴛᴇᴅ ʙʏ:\n@aseppppv</b></blockquote>",
                         disable_web_page_preview=True,
                     )
                     await asyncio.sleep(1)
@@ -76,7 +76,7 @@ async def tag_all_users(_, message):
                 if usernum == 7:
                     await app.send_message(
                         message.chat.id,
-                        f"<blockquote><b>{text}</blockquote></b>\n<blockquote><b>{usertxt}</blockquote></b>\n<blockquote><b>ᴄʀᴇᴀᴛᴇᴅ ʙʏ:\n@SpotifyStream_Id</b></blockquote>",
+                        f"<blockquote><b>{text}</blockquote></b>\n<blockquote><b>{usertxt}</blockquote></b>\n<blockquote><b>ᴄʀᴇᴀᴛᴇᴅ ʙʏ:\n@aseppppv</b></blockquote>",
                         disable_web_page_preview=True,
                     )
                     await asyncio.sleep(2)
@@ -85,7 +85,7 @@ async def tag_all_users(_, message):
             if usernum != 0:
                 await app.send_message(
                     message.chat.id,
-                    f"<blockquote><b>{text}</blockquote></b>\n<blockquote><b>{usertxt}</blockquote></b>\n<blockquote><b>ᴄʀᴇᴀᴛᴇᴅ ʙʏ:\n@SpotifyStream_Id</b></blockquote>",
+                    f"<blockquote><b>{text}</blockquote></b>\n<blockquote><b>{usertxt}</blockquote></b>\n<blockquote><b>ᴄʀᴇᴀᴛᴇᴅ ʙʏ:\n@aseppppv</b></blockquote>",
                     disable_web_page_preview=True,
                 )
         except FloodWait as e:
@@ -125,7 +125,7 @@ async def tag_all_admins(_, message):
                 if usernum == 7:
                     await app.send_message(
                         message.chat.id,
-                        f"<blockquote><b>{replied.text}{usertxt}</blockquote></b>\n<blockquote><b>ᴄʀᴇᴀᴛᴇᴅ ʙʏ:\n@SpotifyStream_Id</b></blockquote>",
+                        f"<blockquote><b>{replied.text}{usertxt}</blockquote></b>\n<blockquote><b>ᴄʀᴇᴀᴛᴇᴅ ʙʏ:\n@aseppppv</b></blockquote>",
                         disable_web_page_preview=True,
                     )
                     await asyncio.sleep(1)
@@ -134,7 +134,7 @@ async def tag_all_admins(_, message):
             if usernum != 0:
                 await app.send_message(
                     message.chat.id,
-                    f"<blockquote><b>{replied.text}{usertxt}</blockquote></b>\n<blockquote><b>ᴄʀᴇᴀᴛᴇᴅ ʙʏ:\n@SpotifyStream_Id</b></blockquote>",
+                    f"<blockquote><b>{replied.text}{usertxt}</blockquote></b>\n<blockquote><b>ᴄʀᴇᴀᴛᴇᴅ ʙʏ:\n@aseppppv</b></blockquote>",
                     disable_web_page_preview=True,
                 )
         except FloodWait as e:
@@ -161,7 +161,7 @@ async def tag_all_admins(_, message):
                 if usernum == 0:
                     await app.send_message(
                         message.chat.id,
-                        f"<blockquote><b>{text}</blockquote></b>\n<blockquote><b>{usertxt}</blockquote></b>\n<blockquote><b>ᴄʀᴇᴀᴛᴇᴅ ʙʏ:\n@SpotifyStream_Id</b></blockquote>",
+                        f"<blockquote><b>{text}</blockquote></b>\n<blockquote><b>{usertxt}</blockquote></b>\n<blockquote><b>ᴄʀᴇᴀᴛᴇᴅ ʙʏ:\n@aseppppv</b></blockquote>",
                         disable_web_page_preview=True,
                 )
         except FloodWait as e:
