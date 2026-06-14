@@ -8,4 +8,4 @@ MukeshAPI
 nekos.py
 telegraph
 # uuid -> stdlib, jangan ditulis di requirements
-git+https://github.com/Vooyage21/apix@main
+sepgram
